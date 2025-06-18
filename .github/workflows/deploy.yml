@@ -12,7 +12,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.repository == 'verysolecd/wmd'
+    if: github.repository == 'verysolecd/md'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -56,7 +56,7 @@ jobs:
       pages: write
       id-token: write
     environment:
-      name: github_pages
+      name: github-pages  # 建议统一使用连字符或下划线
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
